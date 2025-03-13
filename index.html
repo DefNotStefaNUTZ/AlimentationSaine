@@ -16,9 +16,40 @@
             background-color: rgb(237, 232, 220);
             color: #333;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid rgb(177, 127, 89);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(177, 127, 89);
+            color: white;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('food.jpg') no-repeat center center/cover;
+            opacity: 0.2; /* Adjust opacity to make the image less visible */
+            z-index: -1;
+        }
 
         header {
-            background: linear-gradient(135deg, rgba(177, 127, 89, 0.9), rgba(165, 182, 141, 0.9));
+            background: linear-gradient(135deg, rgba(177, 127, 89, 0.95), rgba(165, 182, 141, 0.9));
             color: white;
             padding: 100px 0;
             text-align: center;
@@ -26,7 +57,6 @@
             position: relative;
             overflow: hidden;
         }
-
             header h1 {
                 font-size: 3rem;
                 margin: 0;
@@ -64,6 +94,39 @@
                 font-size: 2.5rem;
                 animation: fadeIn 3s ease-in-out;
             }
+
+        .image-section2 {
+            background: url('moldave.jpg') no-repeat center center/cover;
+            height: 300px;
+            border-radius: 10px;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+            .image-section2 h3 {
+                font-size: 2.5rem;
+                animation: fadeIn 3s ease-in-out;
+            }
+        .image-section3 {
+            background: url('food3.jpg') no-repeat center center/cover;
+            height: 300px;
+            border-radius: 10px;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+            .image-section3 h3 {
+                font-size: 2.5rem;
+                animation: fadeIn 3s ease-in-out;
+            }
         .container {
             width: 90%;
             max-width: 1200px;
@@ -72,7 +135,7 @@
             padding: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.8);
         }
 
         h2 {
@@ -181,7 +244,6 @@
                 color: rgb(177, 127, 89);
                 margin-bottom: 20px;
             }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .graph {
@@ -201,7 +263,9 @@
             <h2>Introduction</h2>
             <p>La santé est un élément fondamental pour le développement de chaque individu. Parmi tous les facteurs qui influencent le bien-être général, l'alimentation joue un rôle important. Au fil du temps, les spécialistes de la nutrition ont cherché à améliorer les habitudes alimentaires et à prévenir les problèmes de santé liés à une alimentation déséquilibrée. Il est devenu indispensable de rendre l'éducation nutritionnelle plus accessible et adaptée aux jeunes afin d'assurer une vie saine et performante, en particulier chez les lycéens.</p>
         </div>
-
+        <div class="image-section3">
+            <h3>Ce n’est pas difficile de manger sainement</h3>
+        </div>
         <div class="section">
             <h2>Actualité du sujet</h2>
             <p>En République de Moldavie, la question d'une alimentation saine devient de plus en plus préoccupante, avec une augmentation des cas de surpoids et d'obésité chez les jeunes. Beaucoup ne considèrent pas l'importance d'une alimentation équilibrée, soit par manque d'intérêt, soit parce qu'ils manquent de temps pour préparer des repas sains. Des études récentes montrent des habitudes alimentaires très variées chez les élèves, ce qui révèle un manque d'attention à l'équilibre nutritionnel. Ces résultats soulignent la nécessité d'une prise de conscience accrue et de recommandations adaptées pour encourager des choix alimentaires plus sains et durables.</p>
@@ -248,7 +312,257 @@
             <h2>Méthodologie de la recherche</h2>
             <p>Pour réaliser cette étude, nous avons adopté une approche structurée. Nous avons distribué un questionnaire à 50 lycéens pour recueillir des informations sur leurs pratiques alimentaires, leur fréquence de repas et leurs préférences nutritionnelles, tant à l'école qu'à la maison. Après avoir collecté les données, nous avons analysé les réponses pour identifier les tendances et les déséquilibres alimentaires. Nous nous sommes également basés sur les recommandations de la FAO et du Programme National Nutrition Santé (PNNS). Des experts en nutrition nous ont conseillé tout au long du projet. Enfin, à partir des résultats, nous avons conçu un menu équilibré et imaginé une campagne de sensibilisation qui se déroulera en avril, visant à encourager les élèves à adopter des habitudes alimentaires plus saines.</p>
         </div>
+        <div class="section">
+            <h2>Le régime alimentaire d'un lycéen</h2>
+            <p>Pour réaliser cette expérience, j’ai contrôlé ce que je mangeais pendant une semaine. La semaine où j'ai vérifié, je n'ai pas pris de petit-déjeuner et il y a évidemment eu des changements. Voici un aperçu de mon régime alimentaire :</p>
 
+            <h3>Lundi</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Repas</th>
+                        <th>Aliments</th>
+                        <th>Protéines (g)</th>
+                        <th>Glucides (g)</th>
+                        <th>Lipides (g)</th>
+                        <th>Calories (kcal)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Petit-déjeuner</td>
+                        <td>Bouillie de maïs avec du fromage, du beurre et un œuf dur</td>
+                        <td>12</td>
+                        <td>50</td>
+                        <td>8</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+                        <td>Déjeuner</td>
+                        <td>Soupe de pommes de terre, carottes et un peu de poulet</td>
+                        <td>8</td>
+                        <td>40</td>
+                        <td>6</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>Soirée</td>
+                        <td>Ragoût de poulet avec du riz et salade de chou</td>
+                        <td>25</td>
+                        <td>55</td>
+                        <td>10</td>
+                        <td>450</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total quotidien</strong></td>
+                        <td></td>
+                        <td><strong>45</strong></td>
+                        <td><strong>145</strong></td>
+                        <td><strong>24</strong></td>
+                        <td><strong>1050</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Mardi</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Repas</th>
+                        <th>Aliments</th>
+                        <th>Protéines (g)</th>
+                        <th>Glucides (g)</th>
+                        <th>Lipides (g)</th>
+                        <th>Calories (kcal)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Petit-déjeuner</td>
+                        <td>Porridge d’avoine avec du lait, une banane et des noix</td>
+                        <td>10</td>
+                        <td>55</td>
+                        <td>7</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+                        <td>Déjeuner</td>
+                        <td>Soupe de légumes avec des haricots et des croûtons</td>
+                        <td>8</td>
+                        <td>45</td>
+                        <td>5</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>Soirée</td>
+                        <td>Pommes de terre bouillies avec des boulettes de poulet et salade de concombres</td>
+                        <td>22</td>
+                        <td>50</td>
+                        <td>12</td>
+                        <td>420</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total quotidien</strong></td>
+                        <td></td>
+                        <td><strong>40</strong></td>
+                        <td><strong>150</strong></td>
+                        <td><strong>24</strong></td>
+                        <td><strong>1070</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="image-section2">
+                <h3>Une alimentation équilibrée n'est pas ne alimentation terne</h3>
+            </div>
+
+            <h3>Mercredi</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Repas</th>
+                        <th>Aliments</th>
+                        <th>Protéines (g)</th>
+                        <th>Glucides (g)</th>
+                        <th>Lipides (g)</th>
+                        <th>Calories (kcal)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Petit-déjeuner</td>
+                        <td>Pain avec du beurre, de la confiture et un verre de lait</td>
+                        <td>8</td>
+                        <td>50</td>
+                        <td>8</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+                        <td>Déjeuner</td>
+                        <td>Soupe de lentilles et pain complet</td>
+                        <td>9</td>
+                        <td>40</td>
+                        <td>4</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>Soirée</td>
+                        <td>Polenta remplacée par du riz avec du ragoût de poulet et choucroute</td>
+                        <td>22</td>
+                        <td>55</td>
+                        <td>8</td>
+                        <td>450</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total quotidien</strong></td>
+                        <td></td>
+                        <td><strong>39</strong></td>
+                        <td><strong>145</strong></td>
+                        <td><strong>20</strong></td>
+                        <td><strong>1100</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Jeudi</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Repas</th>
+                        <th>Aliments</th>
+                        <th>Protéines (g)</th>
+                        <th>Glucides (g)</th>
+                        <th>Lipides (g)</th>
+                        <th>Calories (kcal)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Petit-déjeuner</td>
+                        <td>Omelette avec du pain, des tomates et une tranche de fromage</td>
+                        <td>13</td>
+                        <td>40</td>
+                        <td>9</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+                        <td>Déjeuner</td>
+                        <td>Soupe de chou avec un peu de riz et des herbes</td>
+                        <td>8</td>
+                        <td>40</td>
+                        <td>4</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>Soirée</td>
+                        <td>Riz aux légumes et viande maigre de porc</td>
+                        <td>25</td>
+                        <td>55</td>
+                        <td>12</td>
+                        <td>450</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total quotidien</strong></td>
+                        <td></td>
+                        <td><strong>46</strong></td>
+                        <td><strong>135</strong></td>
+                        <td><strong>25</strong></td>
+                        <td><strong>1100</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Vendredi</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Repas</th>
+                        <th>Aliments</th>
+                        <th>Protéines (g)</th>
+                        <th>Glucides (g)</th>
+                        <th>Lipides (g)</th>
+                        <th>Calories (kcal)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Petit-déjeuner</td>
+                        <td>Yaourt nature avec des biscuits complets et des fruits de saison</td>
+                        <td>10</td>
+                        <td>50</td>
+                        <td>5</td>
+                        <td>350</td>
+                    </tr>
+                    <tr>
+                        <td>Déjeuner</td>
+                        <td>Soupe aux nouilles de légumes et blanc de poulet</td>
+                        <td>10</td>
+                        <td>40</td>
+                        <td>5</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>Soirée</td>
+                        <td>Purée de pommes de terre avec des boulettes de dinde et des cornichons</td>
+                        <td>23</td>
+                        <td>55</td>
+                        <td>10</td>
+                        <td>450</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total quotidien</strong></td>
+                        <td></td>
+                        <td><strong>43</strong></td>
+                        <td><strong>145</strong></td>
+                        <td><strong>20</strong></td>
+                        <td><strong>1100</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Conclusion</h3>
+            <p>J'ai remarqué que je consommais trop peu de calories et pour cette raison, j'ai observé des changements dans mon corps. Après avoir parlé avec un médecin spécialiste, j’ai compris l'importance de la consommation alimentaire et j’ai commencé à prendre le petit-déjeuner dans les semaines suivantes. Cela m'a permis de me sentir plus énergique et de mieux comprendre les risques liés à une alimentation déséquilibrée.</p>
+        </div>
         <div class="colorful-section">
             <p>💡 Une alimentation équilibrée est la clé d'une vie saine et épanouissante !</p>
         </div>
@@ -257,88 +571,87 @@
             <p><span>Mots clés :</span> adolescents, alimentation, santé, bien-être, éducation, prévention, sensibilisation.</p>
         </div>
     </div>
+        <footer>
+            <p><i class="fas fa-users"></i>Élaboré par : Goreacioc Dan, Ojog Ștefan, Supostat Sabina</p>
+            <p><i class="fas fa-microscope"></i>Coordinateurs scientifiques : Călugăru Ana, Zacutelu Maria, Avram Larisa</p>
+            <p><i class="fas fa-language"></i>Coordinateur linguistique : Chiriac Nona</p>
+            <p><i class="fas fa-calendar-alt"></i>CHIȘINĂU 2025</p>
+        </footer>
 
-    <footer>
-        <p><i class="fas fa-users"></i>Élaboré par : Goreacioc Dan, Ojog Ștefan, Supostat Sabina</p>
-        <p><i class="fas fa-microscope"></i>Coordinateurs scientifiques : Călugăru Ana, Zacutelu Maria, Avram Larisa</p>
-        <p><i class="fas fa-language"></i>Coordinateur linguistique : Chiriac Nona</p>
-        <p><i class="fas fa-calendar-alt"></i>CHIȘINĂU 2025</p>
-    </footer>
-
-    <script>
-        // Graph 1: Repas par jour
-        const mealsPerDayCtx = document.getElementById('mealsPerDayChart').getContext('2d');
-        new Chart(mealsPerDayCtx, {
-            type: 'pie',
-            data: {
-                labels: ['3 repas', '2 repas', '1 repas'],
-                datasets: [{
-                    label: 'Repas par jour',
-                    data: [61.1, 37, 1.9],
-                    backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: { position: 'bottom' }
+        <script>
+            // Graph 1: Repas par jour
+            const mealsPerDayCtx = document.getElementById('mealsPerDayChart').getContext('2d');
+            new Chart(mealsPerDayCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['3 repas', '2 repas', '1 repas'],
+                    datasets: [{
+                        label: 'Repas par jour',
+                        data: [61.1, 37, 1.9],
+                        backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
                 }
-            }
-        });
+            });
 
-        // Graph 2: Fruits et légumes
-        const fruitsVeggiesCtx = document.getElementById('fruitsVeggiesChart').getContext('2d');
-        new Chart(fruitsVeggiesCtx, {
-            type: 'doughnut',
-            data: {
-                labels: ['1-2 fruits et 1-2 légumes', '1-2 fruits, moins de légumes', '1-2 légumes, pas de fruits', 'Ni fruits ni légumes'],
-                datasets: [{
-                    label: 'Fruits et légumes par jour',
-                    data: [89.3, 14.8, 11.1, 14.8],
-                    backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
-                }]
-            },
-        });
+            // Graph 2: Fruits et légumes
+            const fruitsVeggiesCtx = document.getElementById('fruitsVeggiesChart').getContext('2d');
+            new Chart(fruitsVeggiesCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['1-2 fruits et 1-2 légumes', '1-2 fruits, moins de légumes', '1-2 légumes, pas de fruits', 'Ni fruits ni légumes'],
+                    datasets: [{
+                        label: 'Fruits et légumes par jour',
+                        data: [89.3, 14.8, 11.1, 14.8],
+                        backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
+                    }]
+                },
+            });
 
-        // Graph 3: Aliments riches en protéines
-        const proteinCtx = document.getElementById('proteinChart').getContext('2d');
-        new Chart(proteinCtx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Oui', 'Parfois', 'Non'],
-                datasets: [{
-                    label: 'Aliments riches en protéines',
-                    data: [81.5, 16.7, 1.8],
-                    backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: { position: 'bottom' }
+            // Graph 3: Aliments riches en protéines
+            const proteinCtx = document.getElementById('proteinChart').getContext('2d');
+            new Chart(proteinCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Oui', 'Parfois', 'Non'],
+                    datasets: [{
+                        label: 'Aliments riches en protéines',
+                        data: [81.5, 16.7, 1.8],
+                        backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
                 }
-            }
-        });
+            });
 
-        // Graph 4: Quantité d'eau
-        const waterCtx = document.getElementById('waterChart').getContext('2d');
-        new Chart(waterCtx, {
-            type: 'pie',
-            data: {
-                labels: ['Moins d\'1L', '1-2L', 'Plus de 2L'],
-                datasets: [{
-                    label: 'Quantité d\'eau par jour',
-                    data: [25.9, 53.7, 20.4],
-                    backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: { position: 'bottom' }
+            // Graph 4: Quantité d'eau
+            const waterCtx = document.getElementById('waterChart').getContext('2d');
+            new Chart(waterCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Moins d\'1L', '1-2L', 'Plus de 2L'],
+                    datasets: [{
+                        label: 'Quantité d\'eau par jour',
+                        data: [25.9, 53.7, 20.4],
+                        backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
                 }
-            }
-        });
-    </script>
+            });
+        </script>
 </body>
 </html>
