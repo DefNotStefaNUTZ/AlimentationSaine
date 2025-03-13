@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet de recherche interdisciplinaire en biologie et chimie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(237, 232, 220);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, rgba(177, 127, 89, 0.9), rgba(165, 182, 141, 0.9));
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+            header h1 {
+                font-size: 3rem;
+                margin: 0;
+                animation: fadeIn 2s ease-in-out;
+            }
+
+            header p {
+                font-size: 1.5rem;
+                margin: 10px 0 0;
+                animation: fadeIn 2.5s ease-in-out;
+            }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+        .image-section {
+            background: url('legumes.jpeg') no-repeat center center/cover;
+            height: 300px;
+            border-radius: 10px;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+            .image-section h3 {
+                font-size: 2.5rem;
+                animation: fadeIn 3s ease-in-out;
+            }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        h2 {
+            color: rgb(177, 127, 89);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+            h2::after {
+                content: '';
+                width: 50px;
+                height: 3px;
+                background: rgb(177, 127, 89);
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+            }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgb(237, 232, 220);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .section:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            .section p {
+                text-align: justify;
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+        .keywords {
+            background: rgb(165, 182, 141);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+            .keywords span {
+                font-weight: bold;
+                color: rgb(237, 232, 220);
+            }
+
+        .colorful-section {
+            background: linear-gradient(135deg, rgb(165, 182, 141), rgb(193, 207, 161));
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+            .colorful-section:hover {
+                transform: scale(1.02);
+                transition: transform 0.3s ease;
+            }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgb(177, 127, 89);
+            color: white;
+            margin-top: 40px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            footer p {
+                margin: 5px 0;
+            }
+
+            footer i {
+                margin-right: 10px;
+                color: #fff;
+            }
+
+        /* Graph Styles */
+        .graph-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .graph {
+            width: 45%;
+            margin-bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+            .graph h3 {
+                text-align: center;
+                color: rgb(177, 127, 89);
+                margin-bottom: 20px;
+            }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .graph {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projet de recherche interdisciplinaire en biologie et chimie</h1>
+        <p>L'importance de l'alimentation dans la vie d'un adolescent en bonne santé</p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>La santé est un élément fondamental pour le développement de chaque individu. Parmi tous les facteurs qui influencent le bien-être général, l'alimentation joue un rôle important. Au fil du temps, les spécialistes de la nutrition ont cherché à améliorer les habitudes alimentaires et à prévenir les problèmes de santé liés à une alimentation déséquilibrée. Il est devenu indispensable de rendre l'éducation nutritionnelle plus accessible et adaptée aux jeunes afin d'assurer une vie saine et performante, en particulier chez les lycéens.</p>
+        </div>
+
+        <div class="section">
+            <h2>Actualité du sujet</h2>
+            <p>En République de Moldavie, la question d'une alimentation saine devient de plus en plus préoccupante, avec une augmentation des cas de surpoids et d'obésité chez les jeunes. Beaucoup ne considèrent pas l'importance d'une alimentation équilibrée, soit par manque d'intérêt, soit parce qu'ils manquent de temps pour préparer des repas sains. Des études récentes montrent des habitudes alimentaires très variées chez les élèves, ce qui révèle un manque d'attention à l'équilibre nutritionnel. Ces résultats soulignent la nécessité d'une prise de conscience accrue et de recommandations adaptées pour encourager des choix alimentaires plus sains et durables.</p>
+        </div>
+
+        <div class="section">
+            <h2>Statistiques sur les habitudes alimentaires</h2>
+            <div class="graph-container">
+                <!-- Graph 1: Repas par jour -->
+                <div class="graph">
+                    <h3>Combien de repas mangez-vous par jour ?</h3>
+                    <canvas id="mealsPerDayChart"></canvas>
+                </div>
+
+                <!-- Graph 2: Fruits et légumes -->
+                <div class="graph">
+                    <h3>Combien de fruits et légumes mangez-vous par jour ?</h3>
+                    <canvas id="fruitsVeggiesChart"></canvas>
+                </div>
+
+                <!-- Graph 3: Aliments riches en protéines -->
+                <div class="graph">
+                    <h3>Consommez-vous des aliments riches en protéines ?</h3>
+                    <canvas id="proteinChart"></canvas>
+                </div>
+
+                <!-- Graph 4: Quantité d'eau -->
+                <div class="graph">
+                    <h3>Quelle quantité d'eau buvez-vous chaque jour ?</h3>
+                    <canvas id="waterChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Sections -->
+        <div class="section">
+            <h2>Buts et objectifs de la recherche</h2>
+            <p>Ce projet a pour objectif d'étudier en profondeur les habitudes alimentaires des lycéens, afin d'identifier à la fois les points positifs et les aspects à améliorer. Sur la base des résultats obtenus, nous souhaitons élaborer un modèle de menu équilibré, adapté aux besoins nutritionnels des adolescents, et concevoir une campagne de sensibilisation. Celle-ci aura pour but d'informer et d'encourager les jeunes à adopter des habitudes alimentaires saines et durables, contribuant ainsi à l'amélioration de leur santé à long terme.</p>
+        </div>
+        <div class="image-section">
+            <h3>Une alimentation saine pour un avenir meilleur</h3>
+        </div>
+        <div class="section">
+            <h2>Méthodologie de la recherche</h2>
+            <p>Pour réaliser cette étude, nous avons adopté une approche structurée. Nous avons distribué un questionnaire à 50 lycéens pour recueillir des informations sur leurs pratiques alimentaires, leur fréquence de repas et leurs préférences nutritionnelles, tant à l'école qu'à la maison. Après avoir collecté les données, nous avons analysé les réponses pour identifier les tendances et les déséquilibres alimentaires. Nous nous sommes également basés sur les recommandations de la FAO et du Programme National Nutrition Santé (PNNS). Des experts en nutrition nous ont conseillé tout au long du projet. Enfin, à partir des résultats, nous avons conçu un menu équilibré et imaginé une campagne de sensibilisation qui se déroulera en avril, visant à encourager les élèves à adopter des habitudes alimentaires plus saines.</p>
+        </div>
+
+        <div class="colorful-section">
+            <p>💡 Une alimentation équilibrée est la clé d'une vie saine et épanouissante !</p>
+        </div>
+
+        <div class="keywords">
+            <p><span>Mots clés :</span> adolescents, alimentation, santé, bien-être, éducation, prévention, sensibilisation.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p><i class="fas fa-users"></i>Élaboré par : Goreacioc Dan, Ojog Ștefan, Supostat Sabina</p>
+        <p><i class="fas fa-microscope"></i>Coordinateurs scientifiques : Călugăru Ana, Zacutelu Maria, Avram Larisa</p>
+        <p><i class="fas fa-language"></i>Coordinateur linguistique : Chiriac Nona</p>
+        <p><i class="fas fa-calendar-alt"></i>CHIȘINĂU 2025</p>
+    </footer>
+
+    <script>
+        // Graph 1: Repas par jour
+        const mealsPerDayCtx = document.getElementById('mealsPerDayChart').getContext('2d');
+        new Chart(mealsPerDayCtx, {
+            type: 'pie',
+            data: {
+                labels: ['3 repas', '2 repas', '1 repas'],
+                datasets: [{
+                    label: 'Repas par jour',
+                    data: [61.1, 37, 1.9],
+                    backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // Graph 2: Fruits et légumes
+        const fruitsVeggiesCtx = document.getElementById('fruitsVeggiesChart').getContext('2d');
+        new Chart(fruitsVeggiesCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['1-2 fruits et 1-2 légumes', '1-2 fruits, moins de légumes', '1-2 légumes, pas de fruits', 'Ni fruits ni légumes'],
+                datasets: [{
+                    label: 'Fruits et légumes par jour',
+                    data: [89.3, 14.8, 11.1, 14.8],
+                    backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
+                }]
+            },
+        });
+
+        // Graph 3: Aliments riches en protéines
+        const proteinCtx = document.getElementById('proteinChart').getContext('2d');
+        new Chart(proteinCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Oui', 'Parfois', 'Non'],
+                datasets: [{
+                    label: 'Aliments riches en protéines',
+                    data: [81.5, 16.7, 1.8],
+                    backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // Graph 4: Quantité d'eau
+        const waterCtx = document.getElementById('waterChart').getContext('2d');
+        new Chart(waterCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Moins d\'1L', '1-2L', 'Plus de 2L'],
+                datasets: [{
+                    label: 'Quantité d\'eau par jour',
+                    data: [25.9, 53.7, 20.4],
+                    backgroundColor: ['rgb(177, 127, 89)', 'rgb(165, 182, 141)', 'rgb(193, 207, 161)'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
