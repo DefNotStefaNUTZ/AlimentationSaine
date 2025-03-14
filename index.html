@@ -19,6 +19,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
+            table-layout: fixed;
             margin: 20px 0;
         }
 
@@ -197,6 +198,9 @@
             text-align: center;
             font-size: 1.2rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            a{
+                 color: white;
+             }
         }
 
             .colorful-section:hover {
@@ -563,8 +567,12 @@
             <h3>Conclusion</h3>
             <p>J'ai remarqué que je consommais trop peu de calories et pour cette raison, j'ai observé des changements dans mon corps. Après avoir parlé avec un médecin spécialiste, j’ai compris l'importance de la consommation alimentaire et j’ai commencé à prendre le petit-déjeuner dans les semaines suivantes. Cela m'a permis de me sentir plus énergique et de mieux comprendre les risques liés à une alimentation déséquilibrée.</p>
         </div>
+        <div class="section">
+            <h2>Conclusion finale</h2>
+            <p>Au terme de ce projet de recherche, nous avons acquis une meilleure compréhension des habitudes alimentaires des élèves et de leur impact sur leur santé. Les données recueillies grâce aux questionnaires ont servi de base solide pour proposer des solutions concrètes, telles qu’un menu équilibré, adapté aux besoins nutritionnels des adolescents. En parallèle, nous avons souligné l’importance d’une campagne de sensibilisation pour aider les élèves à prendre conscience de l’importance d’une alimentation saine et les encourager à consulter des spécialistes. Ce projet met en lumière comment une alimentation équilibrée influence non seulement la santé physique, mais aussi les performances scolaires des jeunes.</p>
+        </div>
         <div class="colorful-section">
-            <p>💡 Une alimentation équilibrée est la clé d'une vie saine et épanouissante !</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSefpbjItq4McG6sAO2LNQ9nchcfashDWCXEVV8XwAMxVBwDUQ/viewform">💡 Une alimentation équilibrée est la clé d’une vie saine et épanouissante ! Remplissez notre questionnaire pour nous aider à comprendre les tendances alimentaires des étudiants.</a>
         </div>
 
         <div class="keywords">
@@ -634,7 +642,7 @@
                 }
             });
 
-            // Graph 4: Quantité d'eau de ce nahui am decis sa fac site (:, wanna kms XD
+            // Graph 4: Quantité d'eau
             const waterCtx = document.getElementById('waterChart').getContext('2d');
             new Chart(waterCtx, {
                 type: 'pie',
