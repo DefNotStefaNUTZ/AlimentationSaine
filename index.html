@@ -728,6 +728,19 @@
                     }
                 }
             });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const hoverTarget = document.querySelector('.hover-target');
+
+                // Add touch event listeners
+                hoverTarget.addEventListener('touchstart', () => {
+                    hoverTarget.classList.add('active'); // Add the hover effect
+                });
+
+                hoverTarget.addEventListener('touchend', () => {
+                    hoverTarget.classList.remove('active'); // Remove the hover effect
+                });
+            });
         </script>
 </body>
 </html>
